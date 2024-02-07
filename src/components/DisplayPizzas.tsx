@@ -1,18 +1,22 @@
-import React, {FC} from 'react';
-import Pizza from '../models/Pizza';
+import React, { FC } from "react";
+import Pizza from "../models/Pizza";
+import SinglePizza from "./SinglePizza";
 
 interface DisplayPizzasProps {
   pizzasList: Pizza[];
+  updatePizza: (newPizza: Pizza) => void;
 }
 
-const DisplayPizzas: FC<DisplayPizzasProps> = ({pizzasList}) => {
+const DisplayPizzas: FC<DisplayPizzasProps> = ({ pizzasList, updatePizza}) => {
   return (
-    <div className='container'>
+    <div className="container">
       {pizzasList.map((pizza) => {
-        return pizza.title;
+        return (
+          <SinglePizza key={pizza.id} updatePizza={updatePizza} pizza={pizza} />
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
 export default DisplayPizzas;
