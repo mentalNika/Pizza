@@ -1,7 +1,8 @@
 import React, { FC } from "react";
+import PizzaFeature from "../features/PizzaFeature";
 
 const PizzaPage: FC = () => {
-  return <h2>Pizza Page</h2>;
+  return <PizzaFeature />
 };
 
 export default PizzaPage;

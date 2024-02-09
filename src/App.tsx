@@ -9,10 +9,10 @@ const App: FC = () => {
   return (
     <div className="App">
       <div className="wrap">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/pizza/:id" element={<PizzaPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/pizza/:id" element={<PizzaPage />} />
+        </Routes>
       </div>
     </div>
   );
